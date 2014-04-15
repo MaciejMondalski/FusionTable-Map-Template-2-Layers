@@ -22,15 +22,19 @@ var MapsLib = {
   //the encrypted Table ID of your Fusion Table (found under File => About)
   //NOTE: numeric IDs will be depricated soon
   fusionTableId:      "1m4Ez9xyTGfY2CU6O-UgEcPzlS0rnzLU93e4Faa0",
-
-  //*New Fusion Tables Requirement* API key. found at https://code.google.com/apis/console/
-  //*Important* this key is for demonstration purposes. please register your own.
-  googleApiKey:       "AIzaSyA3FQFrNr5W2OEVmuENqhb2MBB2JabdaOY",
-
   //name of the location column in your Fusion Table.
   //NOTE: if your location column name has spaces in it, surround it with single quotes
   //example: locationColumn:     "'my location'",
   locationColumn:     "geometry",
+
+  // To get two layers, we need to have two Fusion Tables
+  // Set the fusion table ID and location column for your second Fusion Table here
+  polygonFusionTableId:    "1DZWxPHHoRTVAs8Gnqz3y7xvGnuKYlbm2Cuf5Scw", //polygon layer
+  polygonLocationColumn:   "geometry",
+
+  //*New Fusion Tables Requirement* API key. found at https://code.google.com/apis/console/
+  //*Important* this key is for demonstration purposes. please register your own.
+  googleApiKey:       "AIzaSyA3FQFrNr5W2OEVmuENqhb2MBB2JabdaOY",
 
   map_centroid:       new google.maps.LatLng(41.8781136, -87.66677856445312), //center that your map defaults to
   locationScope:      "chicago",      //geographical area appended to all address searches
@@ -63,6 +67,17 @@ var MapsLib = {
     });
 
     MapsLib.searchrecords = null;
+
+    // define background polygons
+    MapsLib.polygonLayer = new google.maps.FusionTablesLayer({
+      query: {
+        from:   MapsLib.polygonFusionTableId,
+        select: MapsLib.polygonLocationColumn
+      },
+      styleId: 2,
+      templateId: 2
+    });
+    MapsLib.polygonLayer.setMap(map);
 
     //reset filters
     $("#search_address").val(MapsLib.convertToPlainString($.address.parameter('address')));
