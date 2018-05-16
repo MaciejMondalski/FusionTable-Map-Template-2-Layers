@@ -21,16 +21,16 @@ var MapsLib = {
 
   //the encrypted Table ID of your Fusion Table (found under File => About)
   //NOTE: numeric IDs will be depricated soon
-  fusionTableId:      "1m4Ez9xyTGfY2CU6O-UgEcPzlS0rnzLU93e4Faa0",
+  fusionTableId:      "17MtJP-WiGZNk8eAAMWJFGIg_rb3uvqxu8WWTBjQ6",
   //name of the location column in your Fusion Table.
   //NOTE: if your location column name has spaces in it, surround it with single quotes
   //example: locationColumn:     "'my location'",
-  locationColumn:     "geometry",
+  locationColumn:     "OwnerAddre",
 
   // To get two layers, we need to have two Fusion Tables
   // Set the fusion table ID and location column for your second Fusion Table here
   polygonFusionTableId:    "1DZWxPHHoRTVAs8Gnqz3y7xvGnuKYlbm2Cuf5Scw", //polygon layer
-  polygonLocationColumn:   "geometry",
+  polygonLocationColumn:   "OwnerAddre",
 
   //*New Fusion Tables Requirement* API key. found at https://code.google.com/apis/console/
   //*Important* this key is for demonstration purposes. please register your own.
