@@ -1,4 +1,4 @@
-/*!
+y/*!
  * Searchable Map Template with Google Fusion Tables
  * http://derekeder.com/searchable_map_template/
  *
@@ -25,19 +25,19 @@ var MapsLib = {
   //name of the location column in your Fusion Table.
   //NOTE: if your location column name has spaces in it, surround it with single quotes
   //example: locationColumn:     "'my location'",
-  locationColumn:     "OwnerAddre",
+  locationColumn:     "Name",
 
   // To get two layers, we need to have two Fusion Tables
   // Set the fusion table ID and location column for your second Fusion Table here
   polygonFusionTableId:    "1DZWxPHHoRTVAs8Gnqz3y7xvGnuKYlbm2Cuf5Scw", //polygon layer
-  polygonLocationColumn:   "OwnerAddre",
+  polygonLocationColumn:   "Name",
 
   //*New Fusion Tables Requirement* API key. found at https://code.google.com/apis/console/
   //*Important* this key is for demonstration purposes. please register your own.
   googleApiKey:       "AIzaSyBFgJixbTgwmm33hH1-bp0vwqOWmolMZFk",
 
   map_centroid:       new google.maps.LatLng(41.8781136, -87.66677856445312), //center that your map defaults to
-  locationScope:      "chicago",      //geographical area appended to all address searches
+  locationScope:      "Charlotte",      //geographical area appended to all address searches
   recordName:         "result",       //for showing number of results
   recordNamePlural:   "results",
 
