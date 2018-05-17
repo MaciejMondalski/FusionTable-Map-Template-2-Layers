@@ -157,8 +157,8 @@ var MapsLib = {
         from:   MapsLib.polygonFusionTableId,
         select: MapsLib.polygonLocationColumn
       },
-      styleId: 2,
-      templateId: 2
+      styleId: 1,
+      templateId: 1
     });
 
     // only show the layer if the checkbox is checked
@@ -171,8 +171,8 @@ var MapsLib = {
         select: MapsLib.locationColumn,
         where:  whereClause
       },
-      styleId: 2,
-      templateId: 2
+      styleId: 1,
+      templateId: 1
     });
 
     // only show the layer if the checkbox is checked
