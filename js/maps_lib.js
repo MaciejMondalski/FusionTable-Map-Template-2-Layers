@@ -34,7 +34,7 @@ var MapsLib = {
 
   //*New Fusion Tables Requirement* API key. found at https://code.google.com/apis/console/
   //*Important* this key is for demonstration purposes. please register your own.
-  googleApiKey:       "AIzaSyBFgJixbTgwmm33hH1-bp0vwqOWmolMZFk",
+  googleApiKey:       "AIzaSyAp0AylodgUsXvfWUCva9aY3w16LCTqHqM",
 
   map_centroid:       new google.maps.LatLng(35.22297, -80.83897), //center that your map defaults to
   locationScope:      "NC",      //geographical area appended to all address searches
